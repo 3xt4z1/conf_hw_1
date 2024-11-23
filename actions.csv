@@ -1,0 +1,10 @@
+User,Action,Path
+myuser,ls,vfs_root
+myuser,cd,\vfs
+myuser,ls,vfs_root\vfs
+myuser,cd,\vfs\folder1
+myuser,ls,vfs_root\vfs\folder1
+myuser,cd,\vfs
+myuser,ls,vfs_root\vfs
+myuser,clear,
+myuser,exit,
