@@ -10,18 +10,18 @@ class TestShellEmulator(unittest.TestCase):
         self.emulator = ShellEmulator("test_user", "test_host", self.vfs_path, self.log_path)
 
     def test_ls(self):
-        self.emulator.current_dir = Path("/")  # Теперь используется Path
+        self.emulator.current_dir = Path("/")
         self.emulator.ls()
-        # Здесь вы можете добавить проверку вывода или логов
+
 
     def test_cd(self):
         self.emulator.current_dir = Path("/")
         self.emulator.cd(["folder1"])
-        self.assertEqual(self.emulator.current_dir, Path("/folder1"))  # Сравниваем с Path
+        self.assertEqual(self.emulator.current_dir, Path("/folder1"))
 
     def test_rev(self):
         output = self.emulator.rev(["hello", "world"])
-        self.assertEqual(output, "dlrow olleh")  # Проверка перевёрнутой строки
+        self.assertEqual(output, "dlrow olleh")
 
     def test_exit(self):
         with self.assertRaises(SystemExit):
